@@ -1,25 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#definelabs
 
-Things you may want to cover:
+Prerequisites The setups steps expect following tools installed on the system.
 
-* Ruby version
+Github Ruby [2.7.1] Rails [6.0.2]
 
-* System dependencies
+Check out the repository bash git clone git@github.com:sagarsaindre21/define_labs_assesement.git
 
-* Configuration
+Setup database.yml file Set your postgres username and password
 
-* Database creation
+Create and setup the database Run the following commands to create and setup the database.
 
-* Database initialization
+ruby rake db:create rake db:migrate
 
-* How to run the test suite
+Start the Rails server You can start the rails server using the command given below.
+ruby rails s
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# define_labs_assesement
+And now you can visit the site with the URL http://localhost:3000
