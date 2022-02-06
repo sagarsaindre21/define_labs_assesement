@@ -20,7 +20,7 @@
         <% @collection.each do |author| %>
           <tr>
             <td><%= author.full_name %></td>
-            <td><%= author.birthdate %></td>
+            <td><%= author.display_birthdate %></td>
             <td><%= link_to 'Show', author_path(author) %></td>
             <% if current_user == author.user %>
               <td><%= link_to 'Edit', edit_author_path(author) %></td>
