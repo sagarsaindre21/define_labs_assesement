@@ -1,0 +1,14 @@
+<div class="row">
+  <!-- left column -->
+  <div class="col-md-12">
+    <!-- general form elements -->
+    <div class="box box-success record_detail_box">
+      <div class="box-header with-border center">
+        <h3>New Author</h3>
+        <%= link_to 'Back', authors_path %>
+      </div>
+
+      <%= render 'form', author: @author %>
+    </div>
+  </div>
+</div>

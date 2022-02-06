@@ -1,0 +1,34 @@
+<div class="box record_detail_box">
+  <div class="box-header">
+    <div class="listHeaderContainer">
+      <h3 class="box-title">Listing Authors</h3>
+      <a href="<%= new_author_path %>" class="btn btn-sm btn-flat bg-olive pull-right new_record_button"><i class="fa fa-plus-square"></i> New Author</a>
+    </div>
+  </div>
+  <div class="box-body no-padding">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th colspan="3" class="text-center">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @collection.each do |author| %>
+          <tr>
+            <td><%= author.full_name %></td>
+            <td><%= author.birthdate %></td>
+            <td><%= link_to 'Show', author_path(author) %></td>
+            <% if current_user == author.user %>
+              <td><%= link_to 'Edit', edit_author_path(author) %></td>
+              <td><%= link_to 'delete', author_path(author), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
